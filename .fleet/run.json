@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "name": "run src",
+            "program": "/src/Main.java",
+            "type": "command"
+        },
+        {
+            "name": "gradle run",
+            "type": "gradle",
+            "tasks": [
+                "run"
+            ]
+        }
+    ]
+}
