@@ -1,67 +1,79 @@
-public class UnitTestS02 {
-
-    @Test
-    public void runTest() {
-        /*
-        TODO протестируйте вашу задачу из прошлого модуля,
-         напишите не менее 5 различных тестов для вашего приложения
-         */
-    }
-    @Test
-    public void bank_fullTest() {
-        Bank bank = new Bank();
-        bank.setAccounts(10);
-        Account account = new Account();
-        bank.transfer("0","1", 100)
-        bank.transfer("1","2", 100)
-        bank.transfer("2","3", 100)
-        bank.transfer("3","4", 100)
-        bank.transfer("4","0", 100)
-        for (int i = 0; i < 10; ++i){
-            Assertions.assertEquals(account.getMoney(), bank.getBalance(Integer.toString(i)));
-        }
-        bank.getBalance()
-        Assertions.assertEquals(account.getMoney() * 10, bank.getSumAllAccounts());
-
-    }
-    @Test
-    public void getMoney_test() {
-        Account account = new Account();
-        Assertions.assertEquals(0, account.getMoney());
-    }
-
-
-    @Test
-    public void setMoney_test() {
-        var account = new Account();
-        account.setMoney(2000);
-        Assertions.assertEquals(2000, account.getMoney());
-    }
-
-    @Test
-    public void getSumAllAccounts_test() {
-        Bank bank = new Bank();
-        bank.setAccounts(10);
-        Assertions.assertEquals(account.getMoney() * 10, bank.getSumAllAccounts());
-    }
-
-
-    @Test
-    public void getAccNumber_test() {
-        Account account = new Account();
-        account.setAccNumber("5");
-        Assertions.assertEquals("5", account.getAccNumber());
-    }
-
-    @Test
-    public void transfer_test() {
-        Bank bank = new Bank();
-        bank.setAccounts(10);
-        Account account = new Account();
-        bank.transfer("0", "8", 123);
-        Assertions.assertEquals(account.getMoney() - 123, bank.getBalance("0"));
-        Assertions.assertEquals(account.getMoney()  + 123, bank.getBalance("8"));
-    }
-
-
-}
+//import org.junit.jupiter.api.Test;
+//
+//import static org.junit.jupiter.api.Assertions.assertEquals;
+//
+//public class UnitTestS02 {
+//
+//    @Test
+//    public void runTest(){
+//        /*
+//        TODO протестируйте вашу задачу из прошлого модуля,
+//         напишите не менее 5 различных тестов для вашего приложения
+//         */
+//    }
+//
+//    @Test
+//    void getCount() {
+//        Bank bank = new Bank();
+//        bank.setAccounts(10);
+//        Assertions.assertEquals(bank.getCount(),10);
+//    }
+//
+//
+//    @Test
+//    void getBalance() {
+//        Bank bank = new Bank();
+//        bank.setAccounts(10);
+//        Assertions.assertEquals(bank.getBalance("1"),1_000_000);
+//    }
+//
+//    @Test
+//    void getSumAllAccounts() {
+//        Bank bank = new Bank();
+//        bank.setAccounts(10);
+//        bank.
+//        Assertions.assertEquals(bank.getSumAllAccounts(),1_000_000*10);
+//    }
+//
+//    @Test
+//    void getMoney() {
+//        Account account = new Account("1", 1000);
+//        Assertions.assertEquals(account.getMoney(), 1000);
+//    }
+//
+//    @Test
+//    void setMoney() {
+//        Account account = new Account("1", 1000);
+//        account.setMoney(2000);
+//        Assertions.assertEquals(account.getMoney(), 2000);
+//    }
+//
+//    @Test
+//    void getAccNumber() {
+//        Account account = new Account("1", 1000);
+//        Assertions.assertEquals(account.getAccNumber(), "1");
+//    }
+//
+//    @Test
+//    void getStatus() {
+//        Account account = new Account("1", 1000);
+//        Assertions.assertEquals(account.getStatus(), true);
+//
+//    }
+//
+//    @Test
+//    void setStatus() {
+//        Account account = new Account("1", 1000);
+//        Assertions.assertEquals(account.getStatus(), true);
+//        account.setStatus(false);
+//        Assertions.assertEquals(account.getStatus(), false);
+//    }
+//
+//    @Test
+//    void setAccNumber() {
+//        Account account = new Account("1", 1000);
+//        Assertions.assertEquals(account.getAccNumber(), "1");
+//        account.setAccNumber("99");
+//        Assertions.assertEquals(account.getAccNumber(), "99");
+//    }
+//}
